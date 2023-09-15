@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Adoption Agency - Homepage</title>
+  </head>
+  <body>
+    <h1>Available Pets</h1>
+
+    <ul>
+      {% for pet in pets %}
+      <li>
+        <h2>{{pet.name}}</h2>
+        <img src="{{pet.photo_url}}" alt="Pet Photo" />
+        <p>Avalable?: <strong>{{pet.available}}</strong></p>
+      </li>
+      {% endfor %}
+    </ul>
+    <a href="/add">Add a Pet</a>
+  </body>
+</html>
